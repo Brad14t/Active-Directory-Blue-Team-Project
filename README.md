@@ -10,8 +10,10 @@ Specifically this project is an Active Directory enviorment, detecting unauthori
 * Vultur
 
 # Lab Setup
-*Windows Server as my Domain Controller
-*Ubuntu Server for Splunk
-*Windows Server as the Test Server for the attackers
-*Physcial Laptop used by me (Soc Analyst) to access VM's 
-*Attacker Windows VM or VPN used to generate attacker data
+* Windows Server as my Domain Controller
+* Ubuntu Server for Splunk
+* Windows Server as the Test Server for the attackers
+* Physcial Laptop used by me (Soc Analyst) to access VM's 
+* Attacker Windows VM or VPN used to generate attacker data
+
+<img width="540" height="615" alt="Screenshot 2025-07-23 095323" src="https://github.com/user-attachments/assets/674abb69-fb0e-41e5-a141-1cbed4fac4e9" />
