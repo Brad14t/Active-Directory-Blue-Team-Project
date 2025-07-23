@@ -4,10 +4,10 @@ This project is me practicing my blue team skills and prepairing for when I set 
 Specifically this project is an Active Directory enviorment, detecting unauthorized logins via Splunk, using Shuffle SOAR to responde to the attacks.
 
 # Software Used
-*Active Directory
-*Splunk
-*Shuffle
-*Vultur
+* Active Directory
+* Splunk
+* Shuffle
+* Vultur
 
 # Lab Setup
 *Windows Server as my Domain Controller
