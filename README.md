@@ -108,10 +108,63 @@ After this change I was able to receive pings.
 
 # Domain Controller Configuration
 
+First I will add managment tools 
 
+<img width="297" height="285" alt="Screenshot 2025-06-30 101702" src="https://github.com/user-attachments/assets/07977b50-84bd-4a8e-8fa3-8b3a29823799" />
 
+<img width="439" height="288" alt="Screenshot 2025-06-30 102002" src="https://github.com/user-attachments/assets/19a74b0d-a9b7-493a-837d-94ecd2f664ac" />
 
+<img width="321" height="311" alt="Screenshot 2025-06-30 102152" src="https://github.com/user-attachments/assets/6fd08527-c8ea-4470-89d8-ce6df6767c64" />
 
+<img width="426" height="317" alt="Screenshot 2025-06-30 102357" src="https://github.com/user-attachments/assets/b1b77286-c233-440e-ac84-5921fe63186c" />
 
+<img width="423" height="314" alt="Screenshot 2025-06-30 102557" src="https://github.com/user-attachments/assets/2a9423b6-30d1-464b-a281-26fd0eaeb7ff" />
 
+Now with that done I can access Active Directory services.
+
+Next I will setup a user for future testing. I will name this user Jenny Smith.
+
+<img width="650" height="555" alt="Screenshot 2025-06-30 114245" src="https://github.com/user-attachments/assets/e5110da4-1f2e-4211-8de9-17f9a62482ae" />
+
+Next I will set a static DNS for my test server.
+
+<img width="505" height="196" alt="Screenshot 2025-06-30 140310" src="https://github.com/user-attachments/assets/4316e8e6-1918-422a-879c-2a00816ad72e" />
+
+<img width="231" height="265" alt="Screenshot 2025-06-30 140640" src="https://github.com/user-attachments/assets/120a259e-9c16-45e8-b48e-eece6b712394" />
+
+<img width="324" height="176" alt="Screenshot 2025-06-30 140939" src="https://github.com/user-attachments/assets/06280a35-58b7-47fc-a852-bf934a7921fa" />
+
+Next I will sign in as Jenny and make sure I can RDP to the server, and that Jenny is in the remote desktop group.
+
+<img width="784" height="588" alt="Screenshot 2025-06-30 141308" src="https://github.com/user-attachments/assets/67b621a9-2d47-4714-ac6c-ac40e233bccb" />
+
+<img width="375" height="372" alt="Screenshot 2025-06-30 141727" src="https://github.com/user-attachments/assets/40edfe2b-0d8c-457a-9f69-52c74473c859" />
+
+<img width="292" height="193" alt="Screenshot 2025-06-30 141741" src="https://github.com/user-attachments/assets/0ed32541-4a0b-4b69-958c-5c995ccd1629" />
+
+<img width="349" height="204" alt="Screenshot 2025-06-30 141816" src="https://github.com/user-attachments/assets/56da831c-6d71-49f1-a4a0-1a8fb89a8f28" />
+
+# Splunk Configuration
+
+For setting uo Splunk I will start by SSHing into the Ubuntu server. And I will make sure the system is full updated. To do this I run:
+
+` apt-get update && apt-get upgrade `
+
+After updates are complete I will go to Splunks website to get the Linux download. I will get the wlink so I may paste it into my SSH session.
+
+<img width="886" height="211" alt="Screenshot 2025-06-30 142848" src="https://github.com/user-attachments/assets/8ba9f758-fe38-4c56-8c87-4b88e79612cc" />
+
+<img width="1735" height="93" alt="Screenshot 2025-06-30 142949" src="https://github.com/user-attachments/assets/9ecb7168-ac2f-4f10-bcee-0a2673ee6482" />
+
+Now after the download is complete I will look for ` ./splunk `
+
+The correct path is ` cd /opt/splunk/bin/ `
+
+<img width="1648" height="252" alt="Screenshot 2025-06-30 143519" src="https://github.com/user-attachments/assets/49d8e918-3986-4ec2-a012-d057d96cf8e6" />
+
+<img width="183" height="51" alt="Screenshot 2025-06-30 143543" src="https://github.com/user-attachments/assets/2ddefc17-adcc-413c-8a6b-7197bfff77b2" />
+
+After finding the splunk file, run this command to start it: ` ./splunk start `
+
+<img width="672" height="53" alt="Screenshot 2025-06-30 143606" src="https://github.com/user-attachments/assets/5fb1d124-b30f-46a5-8cd9-b18828f84363" />
 
