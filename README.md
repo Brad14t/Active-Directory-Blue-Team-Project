@@ -1,5 +1,5 @@
 # Active Directory Blue Team Project
-This project is me practicing my blue team skills and prepairing for when I set up a physical homelab within my home. Testing which software stack I would like to use.
+This project is me practicing my blue team skills and prepairing for when I set up a more in depth physical homelab within my home. Testing which software stack I would like to use.
 
 Specifically this project is an Active Directory enviorment, detecting unauthorized logins via Splunk, and using Shuffle SOAR to responde to the attacks.
 
