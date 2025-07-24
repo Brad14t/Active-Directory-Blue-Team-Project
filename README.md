@@ -168,3 +168,76 @@ After finding the splunk file, run this command to start it: ` ./splunk start `
 
 <img width="672" height="53" alt="Screenshot 2025-06-30 143606" src="https://github.com/user-attachments/assets/5fb1d124-b30f-46a5-8cd9-b18828f84363" />
 
+After starting Splunk, it wont be able to communicate with my networks since Splunk communicates over port 8000. To fix this I will adjust my firewall.
+
+<img width="320" height="58" alt="Screenshot 2025-06-30 143837" src="https://github.com/user-attachments/assets/290759c8-8a51-421d-ac0e-07966ac54eef" />
+
+In Vulture I will add the rule ` Allow port 8000 from my IP address `
+
+<img width="513" height="229" alt="Screenshot 2025-06-30 143931" src="https://github.com/user-attachments/assets/1d22ac3a-ef9a-4835-bd43-0711b67e0217" />
+
+Then I will add this rule to my Splunk Server as well with this command: ` ufl allow 8000 `
+
+<img width="668" height="130" alt="Screenshot 2025-06-30 143958" src="https://github.com/user-attachments/assets/c7b3588d-cb28-423c-ab18-13010806a15b" />
+
+Now I can acces my Splunk instance
+
+<img width="1186" height="416" alt="Screenshot 2025-06-30 144216" src="https://github.com/user-attachments/assets/4187cafd-6488-461c-ac61-cddf69fd1d38" />
+
+Now to make things easier for myself and allow data to be ingested the correct way to Splunk I need to add an app within Splunk.
+
+I will download and install Splunk add on for Windows.
+
+<img width="256" height="190" alt="Screenshot 2025-06-30 144334" src="https://github.com/user-attachments/assets/c050bd0b-558c-4071-8587-980f688c9d93" />
+
+<img width="706" height="202" alt="Screenshot 2025-06-30 144411" src="https://github.com/user-attachments/assets/f76aede2-e862-4ce1-9199-12befbb2e717" />
+
+Next is to set up an index for the data that will be coming from the Windows Servers
+
+<img width="457" height="198" alt="Screenshot 2025-06-30 144555" src="https://github.com/user-attachments/assets/5422abcf-e8a2-405c-9ceb-706b868e71af" />
+
+<img width="597" height="375" alt="Screenshot 2025-06-30 144629" src="https://github.com/user-attachments/assets/cbbc1947-cd8f-493d-aa81-db4c84fc4711" />
+
+Now I have to set a receiving port so the data reaches me. The default, which I use is ` 9997 `
+
+<img width="456" height="147" alt="Screenshot 2025-06-30 144657" src="https://github.com/user-attachments/assets/349bb7d3-de38-4888-8f5a-0fac6e05a0e9" />
+
+<img width="321" height="219" alt="Screenshot 2025-06-30 144859" src="https://github.com/user-attachments/assets/984bfa98-f71d-4e2c-bce4-0e5e30576114" />
+
+<img width="697" height="171" alt="Screenshot 2025-06-30 144925" src="https://github.com/user-attachments/assets/71f0b112-86df-4a32-a475-0a3a85d7ad73" />
+
+After setting the port I will need to install Splunk Universal Forwarder on each Windows server.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
