@@ -176,7 +176,7 @@ In Vulture I will add the rule ` Allow port 8000 from my IP address `
 
 <img width="513" height="229" alt="Screenshot 2025-06-30 143931" src="https://github.com/user-attachments/assets/1d22ac3a-ef9a-4835-bd43-0711b67e0217" />
 
-Then I will add this rule to my Splunk Server as well with this command: ` ufl allow 8000 `
+Then I will add this rule to my Splunk Server as well with this command: ` ufw allow 8000 `
 
 <img width="668" height="130" alt="Screenshot 2025-06-30 143958" src="https://github.com/user-attachments/assets/c7b3588d-cb28-423c-ab18-13010806a15b" />
 
@@ -238,17 +238,57 @@ Once I have the ` inputs.conf ` file in my local folder, I will need to edit the
 
 <img width="199" height="269" alt="Screenshot 2025-06-30 152040" src="https://github.com/user-attachments/assets/5e3b3acf-02cf-4767-8ac8-872088ef575b" />
 
+Next I will need to edit the Splunk Service, after going into my system services aws admin. I will find the Splunk Forwarder and change it to login as a local system account.
 
+<img width="232" height="385" alt="Screenshot 2025-06-30 152112" src="https://github.com/user-attachments/assets/b7d15c5d-7670-4eb9-ad72-be2b3d644da8" />
 
+<img width="385" height="330" alt="Screenshot 2025-06-30 152236" src="https://github.com/user-attachments/assets/97b39652-01c2-4ff2-a367-eb8313bb5454" />
 
+<img width="323" height="357" alt="Screenshot 2025-06-30 152315" src="https://github.com/user-attachments/assets/1601bb0c-e310-4746-bffb-55e1b25857b3" />
 
+Next stop or restart the Splunk service, then select start.
 
+<img width="379" height="321" alt="Screenshot 2025-06-30 152442" src="https://github.com/user-attachments/assets/8f9dabcc-93dd-4309-a55d-66aca1ab3aa8" />
 
+After that I check if I am receiving telemetry, I see that I cant see anything.
 
+<img width="657" height="305" alt="Screenshot 2025-06-30 152601" src="https://github.com/user-attachments/assets/dea20cd5-78ad-4142-9d31-c60bf6529768" />
 
+After I realized I never added the 9997 port rule to my SSH session, I run ` ufw allow 9997 `
 
+<img width="674" height="87" alt="Screenshot 2025-06-30 152630" src="https://github.com/user-attachments/assets/b94b0b4c-4c0a-412c-a789-5f47db2f5640" />
 
+Now I am able to see the data.
 
+<img width="562" height="593" alt="Screenshot 2025-07-08 102127" src="https://github.com/user-attachments/assets/d8f7dad8-f4d5-401b-ac7e-d1dc9b2fb4a0" />
+
+<img width="894" height="372" alt="Screenshot 2025-07-08 102136" src="https://github.com/user-attachments/assets/7075a015-5ec2-4757-bcd9-9661f50bfcd5" />
+
+After seeing the data, I start to generate some false "attacks" by RDPing into the test server via VPN's, this way it gives me different ip addresses.
+
+To simulate some attacks I added a new rule to my firewall, opening RDP port 3389 to anyone.
+
+<img width="524" height="292" alt="Screenshot 2025-07-18 141539" src="https://github.com/user-attachments/assets/93229c9f-2321-4162-ac77-bbf4fbd7c591" />
+
+<img width="653" height="125" alt="Screenshot 2025-07-08 102328" src="https://github.com/user-attachments/assets/91bb138c-56e3-4732-b685-2d0d9c03a3ea" />
+
+<img width="1325" height="609" alt="Screenshot 2025-07-08 141026" src="https://github.com/user-attachments/assets/ccb6d074-d7b5-4eac-8a7d-b7235042ab3d" />
+
+Start to clean up the results
+
+<img width="1074" height="80" alt="Screenshot 2025-07-08 141217" src="https://github.com/user-attachments/assets/7f7d6e18-c899-43b4-a061-f553be4567b6" />
+
+I will start to manipulate my search string adding and removing commands and functions to get what I like. For this alert and dashboard I will be looking for specific logon types (7 and 10). 
+
+Logon type 7 is the compter unlocking, and Logon type 10 is a remote session into the machine.
+
+<img width="651" height="130" alt="Screenshot 2025-07-18 144113" src="https://github.com/user-attachments/assets/3c80a728-3154-4a92-8836-a8ac54fcf042" />
+
+<img width="1140" height="724" alt="Screenshot 2025-07-18 144123" src="https://github.com/user-attachments/assets/4933a6c1-e1ac-4f81-b62b-abe78454f837" />
+
+<img width="1298" height="445" alt="Screenshot 2025-07-18 144145" src="https://github.com/user-attachments/assets/8e1056f8-7aa3-4343-8ccb-3b38f18f7eea" />
+
+Next I will use the stats command to see a table of the data I am wanting to see
 
 
 
