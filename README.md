@@ -208,21 +208,35 @@ Now I have to set a receiving port so the data reaches me. The default, which I 
 
 After setting the port I will need to install Splunk Universal Forwarder on each Windows server.
 
+On the test server and domain controller I will install the same way.
 
+<img width="894" height="108" alt="Screenshot 2025-06-30 145225" src="https://github.com/user-attachments/assets/cac8c348-3835-4812-932f-99b837e7b6a0" />
 
+<img width="758" height="594" alt="Screenshot 2025-06-30 150408" src="https://github.com/user-attachments/assets/0214364c-fbe8-428d-b552-aaf23914f855" />
 
+<img width="375" height="292" alt="Screenshot 2025-06-30 150526" src="https://github.com/user-attachments/assets/e4d77ba1-3d79-4cdf-b371-335e400b82e5" />
 
+<img width="376" height="298" alt="Screenshot 2025-06-30 150651" src="https://github.com/user-attachments/assets/bba209b7-c774-45f2-86f2-b798054e3a88" />
 
+Next I will need to make sure I have the ` inputs.conf ` file. 
 
+First I check to see if I have it.
 
+<img width="1113" height="317" alt="Screenshot 2025-06-30 151218" src="https://github.com/user-attachments/assets/c85f5691-5d1a-4141-a165-f56143fc8bc1" />
 
+If not, I can copy and paste it from the default folder 1 step back.
 
+<img width="478" height="160" alt="Screenshot 2025-06-30 151414" src="https://github.com/user-attachments/assets/37f6b29a-7fbc-4850-9537-55a20d729975" />
 
+<img width="242" height="190" alt="Screenshot 2025-06-30 151445" src="https://github.com/user-attachments/assets/57f79079-c7be-4dad-b2ab-fce14a84a1f1" />
 
+<img width="787" height="339" alt="Screenshot 2025-06-30 151514" src="https://github.com/user-attachments/assets/a99ffb8d-07ac-439a-95f5-6e02025cb919" />
 
+Once I have the ` inputs.conf ` file in my local folder, I will need to edit the file in notepad as admin.
 
+<img width="247" height="210" alt="Screenshot 2025-06-30 151532" src="https://github.com/user-attachments/assets/250c2ec8-cbb0-4e91-9fae-b5629a4f3612" />
 
-
+<img width="199" height="269" alt="Screenshot 2025-06-30 152040" src="https://github.com/user-attachments/assets/5e3b3acf-02cf-4767-8ac8-872088ef575b" />
 
 
 
