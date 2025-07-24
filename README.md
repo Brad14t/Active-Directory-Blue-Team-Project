@@ -62,7 +62,12 @@ Finally with all 3 created, within Vultur I will get them started up.
 
 <img width="1370" height="559" alt="Screenshot 2025-06-25 120443" src="https://github.com/user-attachments/assets/63916283-a873-4a65-a494-4782af7c4fc4" />
 
+# Firewall Creation 
 
+First I want to make sure my VM's are secure, and that only my machines can access each other.
 
+Within Vultur I will go create a few rules:
+
+'test'
 
 
