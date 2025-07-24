@@ -68,6 +68,8 @@ First I want to make sure my VM's are secure, and that only my machines can acce
 
 Within Vultur I will go create a few rules:
 
-'test'
+` SSH port 22 will only be accepting my public IP `
+` RDP port 3389 will only be accepting my public IP `
+` Drop any other port is by default `
 
 
