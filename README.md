@@ -288,7 +288,93 @@ Logon type 7 is the compter unlocking, and Logon type 10 is a remote session int
 
 <img width="1298" height="445" alt="Screenshot 2025-07-18 144145" src="https://github.com/user-attachments/assets/8e1056f8-7aa3-4343-8ccb-3b38f18f7eea" />
 
-Next I will use the stats command to see a table of the data I am wanting to see
+Next I will use the stats command to see a table of the data I am wanting to see, including the time, computer used, logon type, IP address, user account signed into, and times that IP logged on.
+
+<img width="1884" height="727" alt="Screenshot 2025-07-18 144610" src="https://github.com/user-attachments/assets/3ae95850-07db-40ef-8d24-754d36de2bd9" />
+
+Then I will save the search as an alert.
+
+<img width="1201" height="692" alt="Screenshot 2025-07-18 144815" src="https://github.com/user-attachments/assets/719f5042-59ed-435d-9d7b-a4613a3b80b8" />
+
+<img width="1887" height="514" alt="Screenshot 2025-07-18 145120" src="https://github.com/user-attachments/assets/68172d8e-c183-47f9-a8fe-86c4f70e5ed7" />
+
+If you scroll down I will need to add a trigger, and an action. I will fill this out later with my Shuffle info.
+
+<img width="1196" height="721" alt="Screenshot 2025-07-18 144827" src="https://github.com/user-attachments/assets/456d4690-81ff-4d29-adbf-2ceccf4a97d5" />
+
+# Shuffle Configuration
+
+Once an account is created I select webhook as my first node.
+
+<img width="1747" height="696" alt="Screenshot 2025-07-18 151157" src="https://github.com/user-attachments/assets/2383efa0-0f8e-490e-a80b-2c439e2d8752" />
+
+I select the webhook and copy the link, I can then add that to my trigger action.
+
+<img width="1187" height="728" alt="Screenshot 2025-07-21 121123" src="https://github.com/user-attachments/assets/864f4341-c853-48a8-9cf1-8d84c37479cf" />
+
+I can run a workflow as a test, and it was succesfully connected. 
+
+<img width="1051" height="450" alt="Screenshot 2025-07-21 123118" src="https://github.com/user-attachments/assets/1707047b-a3a5-41ea-a80b-a71b2101c729" />
+
+<img width="691" height="774" alt="Screenshot 2025-07-21 123128" src="https://github.com/user-attachments/assets/654d1f3b-f703-4222-943b-3d0099da1158" />
+
+# Slack Workspace Configuration
+
+Next I will select within Shuffle the Slack notification node and connect it to my webhook.
+
+<img width="1025" height="376" alt="Screenshot 2025-07-21 130336" src="https://github.com/user-attachments/assets/18d358d4-3384-4090-bf07-2aa5e36607a6" />
+
+<img width="625" height="243" alt="Screenshot 2025-07-21 131854" src="https://github.com/user-attachments/assets/ea9f00c5-9147-418b-97d1-048591109b14" />
+
+I will re run the workflow after the connection and configuration of node. I will be looking for a notification within my workspace.
+
+<img width="1291" height="391" alt="Screenshot 2025-07-21 131902" src="https://github.com/user-attachments/assets/5dedbab0-26ee-40a3-bac6-85571c8db8c8" />
+
+Next I want to be emailed when an alert is triggered, as if this was a real soc analyst getting notified of a breach. 
+
+I will use the User actino node within Shuffle. And configure it to email me.
+
+<img width="767" height="206" alt="Screenshot 2025-07-21 132546" src="https://github.com/user-attachments/assets/83d44cb0-039b-4953-b633-d7e189964899" />
+
+<img width="1191" height="342" alt="Screenshot 2025-07-21 132556" src="https://github.com/user-attachments/assets/7a7ba6a7-2fe0-491c-8aa3-cba92f010a75" />
+
+Next I want the playbook to automatically disable the domain user within my AD enviorment.
+
+I will add the Active Directory node, this took some trial and error on the authentication side. But once it is set up correctly it will operate fine.
+
+<img width="969" height="300" alt="Screenshot 2025-07-24 135117" src="https://github.com/user-attachments/assets/ee4c5c1e-d2e8-4e6b-bc3d-33fdccae8b3b" />
+
+# Final Outcome
+
+First I will double check the test user is enabled.
+
+<img width="310" height="29" alt="Screenshot 2025-07-21 151259" src="https://github.com/user-attachments/assets/84893182-bd74-43a1-ac90-97778dc38df9" />
+
+Next I will connect to a VPN from an atacker machine, then RDP into the test server and authenticate as the test user Jenny.
+
+Once the attacker is able to login, I will receive a Slack notification and an email. Showing me who was logged into and what IP address was used. This allows the soc analyst at a glance to see the IP address is out of the designated range for the "company".
+
+<img width="351" height="121" alt="Screenshot 2025-07-22 143826" src="https://github.com/user-attachments/assets/11cb1af3-d654-4d91-8bb5-6fcb814b18d0" />
+
+<img width="1435" height="493" alt="Screenshot 2025-07-22 144504" src="https://github.com/user-attachments/assets/556b2359-6f32-4d6f-9f5b-da2c5bd15aa8" />
+
+I can also check the Active directory node and see if it was succeful in disabling.
+
+<img width="524" height="331" alt="Screenshot 2025-07-22 152809" src="https://github.com/user-attachments/assets/417367ae-3e17-4bb3-805e-f9b7d491a663" />
+
+Now after the playbook was played out I can see the user was successfuly disabled.
+
+<img width="322" height="33" alt="Screenshot 2025-07-22 155141" src="https://github.com/user-attachments/assets/cb58ae69-551e-48e4-8ccd-3b10aa4c1492" />
+
+Then after the disable of the user, the Slack workspace will be updated
+
+<img width="882" height="174" alt="Screenshot 2025-07-22 161022" src="https://github.com/user-attachments/assets/609ccd9d-ccbc-4738-baf3-1d930c9b0691" />
+
+Now that this playbook is successfuly setup the next steps will be to setup a more perminant dashboard within Splunk, this allows the soc analyst to quickly see any unauthorized logins. I will be adding this to my in home lab and making better looking notifications, and a dashboard for these attempts.
+
+
+
+
 
 
 
