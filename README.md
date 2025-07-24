@@ -1,7 +1,7 @@
 # ADProject
 This project is me practicing my blue team skills and prepairing for when I set up a physical homelab within my home. Testing which software stack I would like to use.
 
-Specifically this project is an Active Directory enviorment, detecting unauthorized logins via Splunk, using Shuffle SOAR to responde to the attacks.
+Specifically this project is an Active Directory enviorment, detecting unauthorized logins via Splunk, and using Shuffle SOAR to responde to the attacks.
 
 # Software Used
 * Active Directory
@@ -17,3 +17,9 @@ Specifically this project is an Active Directory enviorment, detecting unauthori
 * Attacker Windows VM or VPN used to generate attacker data
 
 <img width="540" height="615" alt="Screenshot 2025-07-23 095323" src="https://github.com/user-attachments/assets/674abb69-fb0e-41e5-a141-1cbed4fac4e9" />
+
+# The Setup
+
+In this portian I will breifly describe what I did, this will not be an in depth every step of the way approach, due to many troubleshooting steps and its fun to discover them along the way.
+
+**Domain Controller**
